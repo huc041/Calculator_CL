@@ -10,6 +10,9 @@
 #import "stdio.h"
 #import "help.h"
 
+//FIXME:структурная программа. Необходимо использовать ООП.
+//как минимум - можно выделить класс для чтения данных, вывода, валидации, операций
+
 void printOnScreen(float num) {
     NSLog(@"Результат = %.1f", num);
 }
@@ -26,6 +29,7 @@ int main(int argc, const char * argv[]) {
         
         NSString *strCommand = [NSString stringWithFormat:@"%s",str];
         
+        //FIXME:очень много if else + еще и вложенные
         if([strCommand isEqualToString:@"+"]){
             printOnScreen(firstOperand + secondOperand);
         }
